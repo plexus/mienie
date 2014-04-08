@@ -2,5 +2,4 @@
 
 require 'mienie'
 
-window = Mienie::MainWindow.new
-window.show
+Mienie.main_loop

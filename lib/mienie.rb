@@ -1,5 +1,6 @@
 require 'pathname'
 require 'forwardable'
+require 'yaml'
 
 require 'gosu'
 require 'bloops'
@@ -11,35 +12,27 @@ end
 require 'mienie/live_bloops'
 require 'mienie/bloopsiano'
 require 'mienie/menu'
+require 'mienie/menu_pos'
 require 'mienie/menu_selection'
+require 'mienie/menu_image'
+require 'mienie/menu_entry'
+require 'mienie/main_window'
 
 module Mienie
-
-  class MainWindow < Gosu::Window
-    def initialize
-      super 1280, 768, false
-      self.caption = "Gosu Tutorial Game"
-      @piano = Bloopsiano.new(:qwerty)
-      @menu_selection = MenuSelection.new(Menu.new, 0)
-      @image = Gosu::Image.new(self, '/home/arne/Documents/scooter_kinmen.jpg')
-    end
-
-    def update
-    end
-
-    def draw
-      @menu_selection.draw(self)
-      @image.draw(0,0,-1)
-    end
-
-    def button_down(id)
-      @piano.button_down(id)
-      @menu_selection = @menu_selection.button_down(id) do
-        @piano.play 'g3'
+  class << self
+    def main_loop
+      loop do
+        @window = Mienie::MainWindow.new
+        @window.show
+        @window = nil
+        command, @command = @command, nil
+        system(command) if command
       end
-      self.close if id == Gosu::KbSpace
-      exit if id == Gosu::KbEscape
     end
 
+    def shellout(command)
+      @command = command
+      @window.close if @window
+    end
   end
 end

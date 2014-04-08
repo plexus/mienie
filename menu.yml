@@ -1,0 +1,3 @@
+- image: piano.png
+- image: frozen_bubble.png
+  command: "frozen-bubble --fullscreen"

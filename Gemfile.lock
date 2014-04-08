@@ -5,19 +5,14 @@ PATH
       bloopsaphone
       gosu
 
-PATH
-  remote: /home/arne/github/bloopsaphone
-  specs:
-    bloopsaphone (0.4)
-
 GEM
   remote: https://rubygems.org/
   specs:
+    bloopsaphone (0.4)
     gosu (0.7.50)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bloopsaphone!
   mienie!
