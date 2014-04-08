@@ -1,0 +1,23 @@
+PATH
+  remote: .
+  specs:
+    mienie (0.0.0)
+      bloopsaphone
+      gosu
+
+PATH
+  remote: /home/arne/github/bloopsaphone
+  specs:
+    bloopsaphone (0.4)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    gosu (0.7.50)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bloopsaphone!
+  mienie!

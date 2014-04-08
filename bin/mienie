@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'mienie'
+
+window = Mienie::MainWindow.new
+window.show
