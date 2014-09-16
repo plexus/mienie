@@ -4,13 +4,19 @@ module Mienie
 
     QWERTY = {
       Gosu::KbA => 'c3',
+      Gosu::KbW => 'c#3',
       Gosu::KbS => 'd3',
+      Gosu::KbE => 'd#3',
       Gosu::KbD => 'e3',
       Gosu::KbF => 'f3',
+      Gosu::KbT => 'f#3',
       Gosu::KbG => 'g3',
+      Gosu::KbY => 'g#3',
       Gosu::KbH => 'a3',
+      Gosu::KbU => 'a#3',
       Gosu::KbJ => 'b3',
       Gosu::KbK => 'c4',
+      Gosu::KbO => 'c#4',
       Gosu::KbL => 'd4',
     }.freeze
 
